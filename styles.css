@@ -1,0 +1,156 @@
+/* ===== GLOBAL STYLES ===== */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to bottom right, #0d1b2a, #1b263b);
+    color: white;
+    text-align: center;
+}
+
+/* ===== NAVBAR FIXED + WHITE BACKGROUND + WHITE BOLD TEXT ===== */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #0d1b2a;
+    padding: 15px 0;
+    z-index: 100;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.nav-links {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.05rem;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #7dd3fc;
+}
+
+/* ===== MAIN SECTIONS ===== */
+.hero {
+    padding: 100px 20px 50px; /* top padding increased due to fixed navbar */
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.profile-image {
+    width: 370px; /* was 280px */
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+
+.about-section,
+.education-section,
+.education-section {
+    padding: 40px 20px 20px; /* reduced bottom padding */
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.contact-section {
+    padding: 20px 20px 40px; /* reduced top padding */
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.education-image {
+    width: 55%;
+    height: auto;
+    border-radius: 15px;
+    margin-top: 25px;
+}
+.contact-section {
+    padding: 40px 20px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.contact-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: flex-start;
+    background: rgba(255, 255, 255, 0.05);
+    padding: 30px;
+    border-radius: 12px;
+}
+
+.contact-row {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.contact-row img {
+    width: 32px;
+    height: 32px;
+    object-fit: contain;
+}
+
+.contact-row p {
+    font-size: 1rem;
+    margin: 0;
+    color: white;
+}
+
+
+/* ===== FLOATING LOGO (ONLY DESKTOP) ===== */
+.floating-png {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 80px;
+    animation: float 4s ease-in-out infinite;
+}
+
+@keyframes float {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0); }
+}
+
+/* ===== RESPONSIVENESS ===== */
+@media (max-width: 768px) {
+    .nav-links {
+        gap: 20px;
+    }
+
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .profile-image {
+        width: 180px;
+    }
+
+    .education-image {
+        width: 80%;
+    }
+
+    .floating-png {
+        display: none;
+    }
+}
